@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://whitewind88.github.io/white-wind-store/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://whitewind88.github.io/white-wind-store/product1.html</loc>
+  </url>
+
+  <url>
+    <loc>https://whitewind88.github.io/white-wind-store/product2.html</loc>
+  </url>
+
+  <url>
+    <loc>https://whitewind88.github.io/white-wind-store/product3.html</loc>
+  </url>
+
+  <url>
+    <loc>https://whitewind88.github.io/white-wind-store/product4.html</loc>
+  </url>
+
+  <url>
+    <loc>https://whitewind88.github.io/white-wind-store/product5.html</loc>
+  </url>
+
+  <url>
+    <loc>https://whitewind88.github.io/white-wind-store/product6.html</loc>
+  </url>
+
+</urlset>
