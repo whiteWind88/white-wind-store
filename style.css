@@ -1,0 +1,346 @@
+html {
+    scroll-behavior: smooth; /* плавная прокрутка по якорям */
+}
+
+body {
+    /* Можешь заменить на свой фон-картинку:
+       background: url("background.jpg") no-repeat center center fixed;
+       background-size: cover;
+    */
+    background: url("Bundesarchiv_Bild_101III-Wiegand-117-02\,_Russland\,_Kradschütze\,_Beiwagenkrad.jpg") no-repeat center center fixed;
+       background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #222;
+}
+
+/* ==== ШАПКА (HEADER) ==== */
+
+.header {
+    background: #ffffff;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 25px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+h1 {
+    color: #223a39;
+    margin-bottom: 5px;
+    font-size: 32px;
+}
+
+h2 {
+    color: #223a39;
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+/* ==== МЕНЮ (NAVBAR) ==== */
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;   /* меню справа; хочешь по центру – поставь center */
+    gap: 25px;
+    margin-bottom: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.navbar a:hover {
+    color: #223a39;
+    background-color: #e5f0ef;
+}
+
+/* ==== ЛОГОТИП ==== */
+
+.logo {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin: 20px auto 10px;
+}
+
+/* ==== ГЛАВНАЯ КНОПКА В ШАПКЕ ==== */
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 26px;
+    background-color: #223a39;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: #2e5b57;
+}
+
+/* ==== КАТАЛОГ И КАРТОЧКИ ==== */
+
+.products {
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* карточка товара */
+.card {
+    background: #ffffff;
+    width: 260px;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s; /* анимация при наведении */
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 8px 0 4px;
+    font-size: 18px;
+}
+
+.card p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* цена */
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #223a39;
+    margin: 6px 0;
+}
+
+/* кнопка "Купить" в карточке */
+.small-btn {
+    display: block;              /* делаем кнопкой на всю ширину */
+    text-align: center;
+    margin-top: 12px;
+    padding: 10px 22px;
+    background-color: #ffffff;
+    color: #223a39;
+    border: 2px solid #223a39;   /* обводка */
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;       /* если это <a>, убираем подчёркивание */
+}
+
+.small-btn:hover {
+    background-color: #223a39;
+    color: #ffffff;
+}
+
+/* ==== КОНТАКТЫ ==== */
+
+.contacts {
+    background: #ffffff;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.contacts h2 {
+    margin-top: 0;
+}
+
+.contacts p {
+    margin: 4px 0;
+}
+
+/* ==== ПОДВАЛ ==== */
+
+.footer {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin: 25px 0 15px;
+}
+
+/* ==== СТРАНИЦА ОТДЕЛЬНОГО ТОВАРА (ДВЕ ФОТО) ==== */
+
+.product-detail {
+    max-width: 1100px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.product-detail-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;         /* чтобы на узких экранах блоки переносились */
+}
+
+/* левая часть: 2 фотки */
+.product-detail-images {
+    flex: 1 1 55%;           /* левая часть (фото) занимает ~55% */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* сами фотки */
+.product-detail-images img {
+    width: 100%;
+    max-width: 600px;        /* на больших экранах не растягиваем бесконечно */
+    border-radius: 10px;
+    display: block;
+}
+
+/* правая часть: текст, цена, кнопка */
+.product-detail-info {
+    flex: 1 1 40%;
+    max-width: 450px;
+}
+
+.product-detail-info h2 {
+    margin-top: 0;
+}
+
+/* кнопка перехода в Telegram */
+.big-telegram-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 24px;
+    background-color: #229ED9; /* цвет Telegram */
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.big-telegram-btn:hover {
+    background-color: #1b7ca8;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* ==== АДАПТАЦИЯ ПОД ТЕЛЕФОН (RESPONSIVE) ==== */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .header {
+        margin: 10px;
+        padding: 15px 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .products,
+    .contacts,
+    .product-detail {
+        margin: 15px 10px;
+        padding: 15px 15px;
+    }
+
+    .cards {
+        flex-direction: column;   /* ТОЛЬКО НА ТЕЛЕФОНЕ! */
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .product-detail-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-detail-images {
+        width: 100%;
+    }
+
+    .product-detail-images img {
+        max-width: 100%;
+    }
+
+    .product-detail-info {
+        max-width: 100%;
+    }
+
+    .logo {
+        width: 130px;
+        height: 130px;
+    }
+
+    .small-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
